@@ -2,7 +2,6 @@
 
 #include <stdio.h>
 
-int main(){
 // Função void para preencher o tabuleiro de xadrez com peças
 void preencherTabuleiro(char tabuleiro[8][8]) {
     // Peças Brancas = B
@@ -51,7 +50,6 @@ void exibirTabuleiro(char tabuleiro[8][8]) {
         }
         printf("\n");
     }
-}
 }
 
 int main() {
