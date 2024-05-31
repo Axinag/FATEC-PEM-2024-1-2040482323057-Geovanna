@@ -58,7 +58,7 @@ void listar_produtos() {
 void comprar_produto() {
     int id, quantidade;
 
-    printf("Digite o ID do produto que deseja comprar: ");
+    printf("Digite o ID ou nome do produto que deseja comprar: ");
     scanf("%d", &id);
 
     int index = -1;
@@ -74,7 +74,7 @@ void comprar_produto() {
         return;
     }
 
-    printf("Digite a quantidade que deseja comprar: ");
+    printf("Quantos itens deseja comprar?: ");
     scanf("%d", &quantidade);
 
     if (produtos[index].quantidade < quantidade) {
@@ -128,10 +128,10 @@ int main() {
                 finalizar_venda();
                 break;
             case 5:
-                printf("Saindo...\n");
+                printf("Saindo do programa...\n");
                 break;
             default:
-                printf("Opcao invalida!\n");
+                printf("Opção invalida!\n");
         }
     } while (opcao != 5);
 
