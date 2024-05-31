@@ -8,7 +8,6 @@
 //Pretas (T1)(C1)(B1)ReiRainha(B2)(C2)(T2)
 
 int main(){
-// Função void para preencher o tabuleiro de xadrez com peças
 void preencherTabuleiro(char tabuleiro[8][8]) {
     // Peças Brancas = B
     tabuleiro[0][0] = 'B'; 
@@ -21,7 +20,7 @@ void preencherTabuleiro(char tabuleiro[8][8]) {
     tabuleiro[0][7] = 'B'; 
 
     for (int i = 0; i < 8; i++) {
-        tabuleiro[1][i] = 'B'; // Peões Brancos (BP1 até BP8)
+        tabuleiro[1][i] = 'B'; 
     }
 
     // Espaços vazios são o x
@@ -34,7 +33,7 @@ void preencherTabuleiro(char tabuleiro[8][8]) {
     // Peças Pretas = P
     
     for (int i = 0; i < 8; i++) {
-        tabuleiro[6][i] = 'P'; // Peões Pretos (PP1 até PP8)
+        tabuleiro[6][i] = 'P'; 
     }
 
     tabuleiro[7][0] = 'P';
@@ -47,13 +46,12 @@ void preencherTabuleiro(char tabuleiro[8][8]) {
     tabuleiro[7][7] = 'P';
 }
 
-// Função void para exibir o tabuleiro de xadrez
 void exibirTabuleiro(char tabuleiro[8][8]) {
-    printf("  a b c d e f g h\n"); // Números de colunas
+    printf("  a b c d e f g h\n");
     for (int i = 0; i < 8; i++) {
-        printf("%d ", 8 - i); // Números de fileiras
+        printf("%d ", 8 - i);
         for (int j = 0; j < 8; j++) {
-            printf("%c ", tabuleiro[i][j]); // Exibir peça ou espaço vazio
+            printf("%c ", tabuleiro[i][j]);
         }
         printf("\n");
     }
