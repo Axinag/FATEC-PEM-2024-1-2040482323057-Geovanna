@@ -1,43 +1,50 @@
 //Tabuleiro de Xadrez
 
 #include <stdio.h>
+// matrizes, vetores, representar a tabela = tabuleiro
+// Função void para preencher o tabuleiro de xadrez com as peças
 
+//Brncas (T1)(C1)(B1)RainhaRei(B2)(C2)(T2)
+//Pretas (T1)(C1)(B1)ReiRainha(B2)(C2)(T2)
+
+int main(){
 // Função void para preencher o tabuleiro de xadrez com peças
 void preencherTabuleiro(char tabuleiro[8][8]) {
     // Peças Brancas = B
-    tabuleiro[0][0] = 'B'; // Torre à esquerda (T1)
-    tabuleiro[0][1] = 'B'; // Cavalo à esquerda (C1)
-    tabuleiro[0][2] = 'B'; // Bispo à esquerda (B1)
-    tabuleiro[0][3] = 'B'; // Rainha
-    tabuleiro[0][4] = 'B'; // Rei
-    tabuleiro[0][5] = 'B'; // Bispo à direita (B2)
-    tabuleiro[0][6] = 'B'; // Cavalo à direita (C2)
-    tabuleiro[0][7] = 'B'; // Torre à direita (T2)
+    tabuleiro[0][0] = 'B'; 
+    tabuleiro[0][1] = 'B'; 
+    tabuleiro[0][2] = 'B';
+    tabuleiro[0][3] = 'B'; 
+    tabuleiro[0][4] = 'B'; 
+    tabuleiro[0][5] = 'B'; 
+    tabuleiro[0][6] = 'B';
+    tabuleiro[0][7] = 'B'; 
 
     for (int i = 0; i < 8; i++) {
         tabuleiro[1][i] = 'B'; // Peões Brancos (BP1 até BP8)
     }
 
-    // Espaços vazios = X
+    // Espaços vazios são o x
     for (int i = 2; i < 6; i++) {
         for (int j = 0; j < 8; j++) {
-            tabuleiro[i][j] = 'X'; // Espaço vazio
+            tabuleiro[i][j] = 'X'; 
         }
     }
 
     // Peças Pretas = P
+    
     for (int i = 0; i < 8; i++) {
         tabuleiro[6][i] = 'P'; // Peões Pretos (PP1 até PP8)
     }
 
-    tabuleiro[7][0] = 'P'; // Torre à esquerda (T1)
-    tabuleiro[7][1] = 'P'; // Cavalo à esquerda (C1)
-    tabuleiro[7][2] = 'P'; // Bispo à esquerda (B1)
-    tabuleiro[7][3] = 'P'; // Rainha
-    tabuleiro[7][4] = 'P'; // Rei
-    tabuleiro[7][5] = 'P'; // Bispo à direita (B2)
-    tabuleiro[7][6] = 'P'; // Cavalo à direita (C2)
-    tabuleiro[7][7] = 'P'; // Torre à direita (T2)
+    tabuleiro[7][0] = 'P';
+    tabuleiro[7][1] = 'P'; 
+    tabuleiro[7][2] = 'P'; 
+    tabuleiro[7][3] = 'P';
+    tabuleiro[7][4] = 'P'; 
+    tabuleiro[7][5] = 'P'; 
+    tabuleiro[7][6] = 'P'; 
+    tabuleiro[7][7] = 'P';
 }
 
 // Função void para exibir o tabuleiro de xadrez
