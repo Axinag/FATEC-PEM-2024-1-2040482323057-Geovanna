@@ -21,7 +21,7 @@ void inserir_produto();
 void listar_produtos();
 void comprar_produto();
 void finalizar_venda();
-void ordenar_produtos();
+void ordenar_produtos(Produto *produtos, int n);
 
 void inserir_produto() {
     if (contador_produtos >= MAX_PRODUTOS) {
@@ -46,7 +46,7 @@ void inserir_produto() {
 }
 
 void listar_produtos() {
-    ordenar_produtos();
+    ordenar_produtos(produtos, contador_produtos);
     printf("\nLista de produtos:\n");
     for (int i = 0; i < contador_produtos; i++) {
         printf("ID: %d | Nome: %s | Descrição: %s | Preço: %.2f | Quantidade: %d\n",
@@ -86,9 +86,9 @@ void comprar_produto() {
     printf("Compra realizada com sucesso!\n");
 }
 
-void ordenar_produtos() {
-    for (int i = 0; i < contador_produtos - 1; i++) {
-        for (int j = 0; j < contador_produtos - i - 1; j++) {
+void ordenar_produtos(Produto *produtos, int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
             if (strcmp(produtos[j].nome, produtos[j + 1].nome) > 0) {
                 Produto temp = produtos[j];
                 produtos[j] = produtos[j + 1];
