@@ -1,4 +1,4 @@
-// Atividade B1_3: Tabuleiro de Xadrez
+//Tabuleiro de Xadrez
 
 #include <stdio.h>
 
